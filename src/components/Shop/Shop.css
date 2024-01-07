@@ -1,0 +1,31 @@
+.shop-container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  padding: 38px;
+}
+.product-contailer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 45px;
+}
+.card-header {
+  text-align: center;
+}
+/* .card-container {
+  color: #1c2b35;
+  font-family: Lato;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.card-header {
+  text-align: center;
+  color: #1c2b35;
+  font-family: Lato;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 176px;
+} */
