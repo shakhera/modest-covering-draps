@@ -1,7 +1,6 @@
 import React from "react";
-import Header from "../Header/Header";
 import { Outlet } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../pages/shared/Navbar/Navbar";
 
 const Main = () => {
   return (
