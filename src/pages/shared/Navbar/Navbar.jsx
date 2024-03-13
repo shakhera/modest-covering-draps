@@ -9,7 +9,7 @@ const Navbar = () => {
   };
   return (
     <div>
-      <nav className=" md:w-full bg-opacity-30 bg-slate-950  px-10 border-gray-200 dark:bg-gray-900 dark:border-gray-700 md:text-white font-semibold">
+      <nav className="md:fixed md:z-10 md:w-full bg-opacity-30 bg-slate-950  px-10 border-gray-200 dark:bg-gray-900 dark:border-gray-700 md:text-white font-semibold">
         <div className=" flex flex-wrap items-center justify-between  p-4">
           <Link to="/" className="flex flex-col items-center justify-center">
             <h2 className="logo-name text-3xl font-bold">
@@ -59,10 +59,18 @@ const Navbar = () => {
               </li>
               <li className="mx-4 md:my-0 ">
                 <Link
-                  to="about"
+                  to="/collections"
                   className="text-xl hover:text-cyan-500 duration-500"
                 >
-                  About Us
+                  Collection
+                </Link>
+              </li>
+              <li className="mx-4 md:my-0 ">
+                <Link
+                  to="/collection"
+                  className="text-xl hover:text-cyan-500 duration-500"
+                >
+                  Collect
                 </Link>
               </li>
 

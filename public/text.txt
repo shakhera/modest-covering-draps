@@ -1,1 +1,22 @@
-http://localhost:5173/
+{
+    "category": "Bag",
+    "name": "Superlite Hat",
+    "seller": "Addidas",
+    "price": 151,
+    "stock": 18,
+    "ratings": 3,
+    "ratingsCount": 39,
+    "shipping": 32,
+    "quantity": 0
+  },
+  {
+    "category": "Cap",
+    "name": "Superlite Hat",
+    "seller": "Addidas",
+    "price": 10,
+    "stock": 10,
+    "ratings": 5,
+    "ratingsCount": 47,
+    "shipping": 24,
+    "quantity": 0
+  },
