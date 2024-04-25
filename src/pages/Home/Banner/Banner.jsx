@@ -112,12 +112,14 @@ const Banner = () => {
         >
           {/* sliders */}
           {carouselImages.map((slide, inx) => (
-            <img
-              key={slide}
-              src={slide}
-              className="min-w-full h-60 bg-black/20 sm:h-96 md:h-[540px] object-cover"
-              alt={`Slider - ${inx + 1}`}
-            />
+            <>
+              <img
+                key={slide}
+                src={slide}
+                className="min-w-full h-60 bg-black/20 sm:h-96 md:h-[540px] object-cover"
+                alt={`Slider - ${inx + 1}`}
+              />
+            </>
           ))}
         </div>
       </div>

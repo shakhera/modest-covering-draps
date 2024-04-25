@@ -3,8 +3,10 @@ import Main from "../Layout/Main";
 import Home from "../pages/Home/Home/Home";
 import Contact from "../pages/Contact/Contact";
 import Login from "../pages/Login/Login";
-import Collections from "../pages/Collection/Collections/Collections";
 import Collection from "../pages/Collection/Collections/Collection";
+import SignUp from "../pages/Login/SignUp";
+import Blogs from "../pages/Blogs/Blogs";
+import Shop from "../pages/Collection/Shop/Shop";
 
 const routers = createBrowserRouter([
   {
@@ -16,18 +18,18 @@ const routers = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/collections",
-        element: <Collections></Collections>,
+        path: "/shop",
+        element: <Shop></Shop>,
       },
+      // {
+      //   path: "/collection",
+      //   element: <Collection></Collection>,
+      // },
+        
       {
-        path: "/collection",
-        element: <Collection></Collection>,
+        path: "blogs",
+        element: <Blogs></Blogs>,
       },
-      //   {
-      //     path: "/orders",
-      //     element: <Orders></Orders>,
-      //   },
-
       {
         path: "/contact",
         element: <Contact></Contact>,
@@ -35,6 +37,10 @@ const routers = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "signUp",
+        element: <SignUp></SignUp>,
       },
     ],
   },

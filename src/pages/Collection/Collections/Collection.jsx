@@ -10,24 +10,24 @@ const Collection = () => {
   const minProductPrice = parseInt(Math.min(...price));
   const maxProductPrice = parseInt(Math.max(...price));
 
-  console.log(typeof minProductPrice, maxProductPrice);
+  // console.log(typeof minProductPrice, maxProductPrice);
 
   const [ratings, setRatings] = useState();
   const [minPrices, setMinPrices] = useState(minProductPrice);
   const [maxPrices, setMaxPrices] = useState(maxProductPrice);
 
-  console.log(minPrices, maxPrices, typeof ratings);
+  // console.log(minPrices, maxPrices, typeof ratings);
 
   const handlePrice = (price) => {
-    // console.log(price);
-    const maxPrice = parseInt(price.split(" ")[0]);
-    const minPrice = parseInt(price.split(" ")[2]);
-    // console.log(typeof maxPrice, typeof minPrice);
+    // console.log("price", price);
+    const minPrice = parseInt(price.split(" ")[0]);
+    const maxPrice = parseInt(price.split(" ")[2]);
+    // console.log("max", maxPrice, "min", minPrice);
     setMinPrices(minPrice);
     setMaxPrices(maxPrice);
   };
 
-  console.log("filter", filtered);
+  // console.log("filter", filtered);
   const url = `http://localhost:5000/products?minPrice=${minPrices}&maxPrice=${maxPrices}&rating=${ratings}`;
   useEffect(() => {
     fetch(url)
@@ -37,9 +37,9 @@ const Collection = () => {
   }, [minPrices, maxPrices, ratings]);
 
   return (
-    <div className="pt-28">
+    <div className="">
       <div className="flex">
-        <div className="md:w-[75%]">
+        <div className="md:w-[75%] pt-28">
           <h2>Total Products: {filtered.length}</h2>
           <div className="grid md:grid-cols-3 gap-4  ">
             {filtered.map((product) => (

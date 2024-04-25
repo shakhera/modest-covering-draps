@@ -1,5 +1,66 @@
 [
   {
+    "category": "Borka",
+    "name": "Black Abaya with Lace Detail",
+    "seller": "Borka Emporium",
+    "price": 120,
+    "stock": 15,
+    "ratings": 4.8,
+    "ratingsCount": 230,
+    "img": "https://i.postimg.cc/gkJmJf9r/773ab37bd4637b7334ecceb9c0caf0fc-jpg-750x400-jpg.webp",
+    "shipping": 15,
+    "quantity": 0
+  },
+  {
+    "category": "Borka",
+    "name": "Navy Blue Closed Abaya",
+    "seller": "Modest Wear",
+    "price": 110,
+    "stock": 10,
+    "ratings": 4.5,
+    "ratingsCount": 180,
+    "img": "https://i.postimg.cc/ZRhbqwxJ/7.jpg",
+    "shipping": 12,
+    "quantity": 0
+  },
+  {
+    "category": "Borka",
+    "name": "Grey Flare Sleeve Burka",
+    "seller": "Fashion Fusion",
+    "price": 130,
+    "stock": 12,
+    "ratings": 4.7,
+    "ratingsCount": 200,
+    "img": "https://i.postimg.cc/Y09J2FZp/1.jpg",
+    "shipping": 10,
+    "quantity": 0
+  },
+  {
+    "category": "Borka",
+    "name": "White Embroidered Jilbab",
+    "seller": "Modesty Maven",
+    "price": 125,
+    "stock": 8,
+    "ratings": 4.6,
+    "ratingsCount": 190,
+    "img": "https://i.postimg.cc/RZrby2SC/1.avif",
+    "shipping": 11,
+    "quantity": 0
+  },
+
+  {
+    "category": "Borka",
+    "name": "Beige Khimar with Lace",
+    "seller": "Elegant Modesty",
+    "price": 115,
+    "stock": 9,
+    "ratings": 4.9,
+    "ratingsCount": 210,
+    "img": "https://i.postimg.cc/JznMdS7j/download.jpg",
+    "shipping": 14,
+    "quantity": 0
+  },
+  {
     "category": "Men's Sneaker",
     "name": "ULTRABOOST 22 SHOES",
     "seller": "Addidas",
@@ -302,6 +363,67 @@
     "shipping": 10,
     "quantity": 0
   },
+
+  {
+    "category": "Women's Shoes",
+    "name": "Pointed Toe High Heels",
+    "seller": "Stylish Steps",
+    "price": 150,
+    "stock": 30,
+    "ratings": 4.7,
+    "ratingsCount": 280,
+    "img": "https://i.postimg.cc/RFd2xQT2/1.jpg",
+    "shipping": 18,
+    "quantity": 0
+  },
+  {
+    "category": "Women's Shoes",
+    "name": "Sneakers with Floral Print",
+    "seller": "Sporty Chic Footwear",
+    "price": 100,
+    "stock": 25,
+    "ratings": 4.6,
+    "ratingsCount": 250,
+    "img": "https://i.postimg.cc/W19Qy7XK/1.jpg",
+    "shipping": 15,
+    "quantity": 0
+  },
+  {
+    "category": "Women's Shoes",
+    "name": "Ankle Strap Sandals",
+    "seller": "Beachy Vibes Boutique",
+    "price": 120,
+    "stock": 28,
+    "ratings": 4.8,
+    "ratingsCount": 270,
+    "img": "https://i.postimg.cc/SQvdHvhc/1.jpg",
+    "shipping": 14,
+    "quantity": 0
+  },
+  {
+    "category": "Women's Shoes",
+    "name": "Classic Ballet Flats",
+    "seller": "Dancewear Delight",
+    "price": 80,
+    "stock": 35,
+    "ratings": 4.9,
+    "ratingsCount": 290,
+    "img": "https://i.postimg.cc/855WnSP8/1.jpg",
+    "shipping": 10,
+    "quantity": 0
+  },
+  {
+    "category": "Women's Shoes",
+    "name": "Platform Wedge Sandals",
+    "seller": "Summer Breeze Footwear",
+    "price": 110,
+    "stock": 32,
+    "ratings": 4.7,
+    "ratingsCount": 260,
+    "img": "https://i.postimg.cc/FK2dGJqS/1.jpg",
+    "shipping": 16,
+    "quantity": 0
+  },
   {
     "category": "Men's Sneaker",
     "name": "ESSENTIALS COLORBLOCK TEE",
@@ -348,6 +470,44 @@
     "ratingsCount": 346,
     "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/c2aaf5e8a7924f1d9277ac9f005b5f37_9366/Santiago_Lunch_Bag_Black_EX6532_01_standard.jpg",
     "shipping": 42,
+    "quantity": 0
+  },
+
+  {
+    "category": "Bag",
+    "name": "Leather Tote Bag",
+    "seller": "Luxury Handbags Inc.",
+    "price": 200,
+    "stock": 20,
+    "ratings": 4.8,
+    "ratingsCount": 250,
+    "img": "https://i.postimg.cc/jd6XCdf4/1.jpg",
+    "shipping": 20,
+    "quantity": 0
+  },
+  {
+    "category": "Bag",
+    "name": "Canvas Backpack",
+    "seller": "Adventure Gear Co.",
+    "price": 80,
+    "stock": 15,
+    "ratings": 4.5,
+    "ratingsCount": 180,
+    "img": "https://i.postimg.cc/FRMKtvsY/1.jpg",
+    "shipping": 10,
+    "quantity": 0
+  },
+
+  {
+    "category": "Bag",
+    "name": "Quilted Shoulder Bag",
+    "seller": "Classic Style Boutique",
+    "price": 150,
+    "stock": 18,
+    "ratings": 4.7,
+    "ratingsCount": 220,
+    "img": "https://i.postimg.cc/4NqnVzT6/1.jpg",
+    "shipping": 15,
     "quantity": 0
   },
   {
