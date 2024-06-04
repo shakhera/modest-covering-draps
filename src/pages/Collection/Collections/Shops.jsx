@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import useProduct from "../../../hooks/useProduct";
 import ProductCard from "../../shared/ProductCard/ProductCard";
 
@@ -36,7 +36,6 @@ const Shops = () => {
             <ul className="hover:cursor-pointer text-start pl-8 md:pl-0 md:text-left lg:pl-4">
               {categories.map((item, index) => (
                 <li key={index} onClick={() => setCategorys(item)}>
-                  {/* {item} */}
                   <button className={setCategorys === item ? "active" : ""}>
                     {item}
                   </button>
@@ -51,7 +50,9 @@ const Shops = () => {
             <ul className="" style={{}}>
               {categories.map((item, index) => (
                 <li key={index} onClick={() => setCategorys(item)}>
-                  <button className={setCategorys === item ? "active" : ""}>{item}</button>
+                  <button className={setCategorys === item ? "active" : ""}>
+                    {item}
+                  </button>
                 </li>
               ))}
             </ul>

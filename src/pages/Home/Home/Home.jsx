@@ -2,17 +2,17 @@ import React from "react";
 import Banner from "../Banner/Banner";
 import PopularProduct from "../PopularProduct/PopularProduct";
 import AboutUs from "../AboutUs/AboutUs";
-import Contact from "../../Contact/Contact";
 import Category from "../Category/Category";
+import Bannar from "../Banner/Bannar";
 
 const Home = () => {
   return (
     <div>
-      <Banner></Banner>
+      <Bannar></Bannar>
+      {/* <Banner></Banner> */}
       <PopularProduct></PopularProduct>
-      {/* <Category></Category> */}
+      <Category></Category>
       <AboutUs></AboutUs>
-      <Contact></Contact>
     </div>
   );
 };

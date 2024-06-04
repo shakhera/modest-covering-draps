@@ -7,6 +7,10 @@ import Collection from "../pages/Collection/Collections/Collection";
 import SignUp from "../pages/Login/SignUp";
 import Blogs from "../pages/Blogs/Blogs";
 import Shop from "../pages/Collection/Shop/Shop";
+import Cart from "../pages/Collection/Cart/Cart";
+import CartLayout from "../Layout/CartLayout";
+import PrivateRoutes from "./PrivateRoutes";
+import DashboardLayout from "../Layout/DashboardLayout";
 
 const routers = createBrowserRouter([
   {
@@ -21,11 +25,12 @@ const routers = createBrowserRouter([
         path: "/shop",
         element: <Shop></Shop>,
       },
+
       // {
       //   path: "/collection",
       //   element: <Collection></Collection>,
       // },
-        
+
       {
         path: "blogs",
         element: <Blogs></Blogs>,
@@ -41,6 +46,30 @@ const routers = createBrowserRouter([
       {
         path: "signUp",
         element: <SignUp></SignUp>,
+      },
+    ],
+  },
+  // {
+  //   path: "/",
+  //   element: <CartLayout></CartLayout>,
+  //   children: [
+  //     {
+  //       path: "/cart",
+  //       element: <Cart></Cart>,
+  //     },
+  //   ],
+  // },
+  {
+    path: "dashboard",
+    element: (
+      <PrivateRoutes>
+        <DashboardLayout></DashboardLayout>
+      </PrivateRoutes>
+    ),
+    children: [
+      {
+        path: "cart",
+        element: <Cart></Cart>,
       },
     ],
   },

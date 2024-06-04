@@ -97,7 +97,7 @@ const Banner = () => {
         <div className="flex justify-center items-center rounded-full z-50 absolute bottom-4 w-full gap-1">
           {carouselImages.map((_, inx) => (
             <button
-              key={_}
+              key={inx}
               onClick={() => setCurrentSlider(inx)}
               className={`rounded-full duration-500 bg-white ${
                 currentSlider === inx ? "w-8" : "wz-2"
@@ -114,7 +114,7 @@ const Banner = () => {
           {carouselImages.map((slide, inx) => (
             <>
               <img
-                key={slide}
+                key={inx}
                 src={slide}
                 className="min-w-full h-60 bg-black/20 sm:h-96 md:h-[540px] object-cover"
                 alt={`Slider - ${inx + 1}`}

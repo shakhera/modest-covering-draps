@@ -2,11 +2,13 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="pt-6 lg:pt-24 mb-6">
+    <div className="pt-6 lg:pt-1 mb-6">
       <div className="hero min-h-screen ">
         <div className="card shrink-0 md:w-2/3 lg:w-1/2  shadow-2xl bg-base-100">
-          <h2 className="text-center pt-4 text-2xl font-bold text-red-800 uppercase font-serif">Send Us a Message</h2>
-          <form className="card-body ">
+          <h2 className="text-center pt-4 text-2xl font-bold text-red-800 uppercase font-serif">
+            Send Us a Message
+          </h2>
+          <form className="card-body dark:bg-black">
             <div className="flex gap-3">
               <div className="form-control w-1/2">
                 <label className="label">
@@ -59,7 +61,7 @@ const Contact = () => {
             </div>
 
             <div className="flex justify-center mt-6">
-              <button className="btn btn-neutral bg-red-900  text-white font-bold">
+              <button className=" border-red-500 border font-extrabold px-3 py-2 shadow-lg shadow-red-900  hover:shadow-inner hover:shadow-red-800">
                 Send message
               </button>
             </div>

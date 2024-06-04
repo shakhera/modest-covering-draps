@@ -1,20 +1,27 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { user, logOut } = useAuth();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {})
+      .catch(() => {});
   };
   return (
     <div>
       <nav className=" lg:w-full bg-opacity-30   px-10 border-gray-200 dark:bg-gray-900 dark:border-gray-700 dark:text-white lg:text-black shadow-xl font-semibold">
         <div className=" flex flex-wrap items-center justify-between  p-4">
           <Link to="/" className="flex flex-col items-center justify-center">
-            <h2 className="logo-name text-3xl font-bold">
-              Modest
-              <span className="text-red-500">Covering</span>Draps
+            <h2 className="logo-name text-3xl font-bold border-red-500 border px-2 py-2 hover:shadow-inner hover:shadow-red-800">
+              <span className="text-red-500">Allure</span>Marketplace
             </h2>
           </Link>
           <button
@@ -91,20 +98,33 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              <div className="flex items-center ml-4 lg:items-end mt-4 lg:mt-0">
-                <Link
-                  to="/signup"
-                  className="btn btn-sm pl-10 -mr-24 ml-16  text-white text-1xl font-bold rounded-2xl transition duration-300 ease-in-out bg-gradient-to-r from-red-400 to-slate-600 hover:from-teal-800 hover:to-red-400 hover:bg-gradient-to-r focus:outline-none focus:ring-2 focus:ring-white"
-                >
-                  SignUp
-                </Link>
-                <Link
-                  to="/login"
-                  className="btn btn-sm -ml-9 mr-6 text-white text-1xl font-bold rounded-2xl transition duration-300 ease-in-out bg-gradient-to-r from-red-400 to-slate-600 hover:from-teal-800 hover:to-red-400 hover:bg-gradient-to-r focus:outline-none focus:ring-2 focus:ring-white"
-                >
-                  SignIn
-                </Link>
-              </div>
+              {user ? (
+                <>
+                  <button
+                    onClick={handleLogout}
+                    className="  border-red-500 border px-2 py-2 hover:shadow-inner hover:shadow-red-800"
+                  >
+                    LogOut
+                  </button>
+                </>
+              ) : (
+                <div>
+                  <div className="flex items-center ml-4 lg:items-end mt-4 lg:mt-0">
+                    <Link
+                      to="/signup"
+                      className="   border-red-500 border px-2 py-2 hover:shadow-inner hover:shadow-red-800"
+                    >
+                      SignUp
+                    </Link>
+                    <Link
+                      to="/login"
+                      className="  border-red-500 border px-2 py-2 hover:shadow-inner hover:shadow-red-800"
+                    >
+                      SignIn
+                    </Link>
+                  </div>
+                </div>
+              )}
             </ul>
           </div>
         </div>
