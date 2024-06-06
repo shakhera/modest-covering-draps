@@ -59,7 +59,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="">
-      <div className="px-2 py-2 shadow-lg max-w-[350px] h-[505px] font-sans rounded-xl space-y-2  md:mx-auto bg-white">
+      <div className="px-2 py-2 shadow-lg max-w-[350px] h-[505px] font-sans rounded-xl space-y-2  md:mx-auto bg-white dark:bg-gray-800">
         <div className="flex justify-center w-full h-48 lg:h-[280px] relative">
           {/* <div className="flex justify-between items-center left-4 right-4 top-4 absolute">
             <button className="bg-[#0095FF] hover:bg-[#0095FF]/90 duration-200 text-white font-medium px-3 py-1 rounded-xl">
@@ -89,7 +89,7 @@ const ProductCard = ({ product }) => {
         <div className="flex justify-center  ">
           <button
             onClick={() => handleAddToCard(product)}
-            className="px-6 py-2 border-2 border-red-800 text-black rounded-lg font-semibold md:text-base sm:text-sm text-[12px]  hover:text-white hover:bg-red-800 "
+            className="px-6 py-2 border-2 border-red-800 text-black rounded-lg font-semibold md:text-base sm:text-sm text-[12px]  hover:text-white hover:bg-red-800 dark:text-white dark:bg-red-800 dark:hover:bg-red-700 "
           >
             Order Now
           </button>

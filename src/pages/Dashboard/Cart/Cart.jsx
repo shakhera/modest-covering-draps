@@ -1,11 +1,9 @@
 import React from "react";
-import useCart from "../../../hooks/useCart";
 import Swal from "sweetalert2";
-import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import { FaTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Header from "../../shared/UpperHeader/Header";
-import TotalPrice from "../../../components/TotalPrice/TotalPrice";
+import useCart from "../../../hooks/useCart";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
 const Cart = () => {
   const [carts, refetch] = useCart();
@@ -137,11 +135,20 @@ const Cart = () => {
             Continue Shopping
           </button>
         </Link>
-        <Link to="/shop">
-          <button className=" text-xl font-bold rounded-md border-2 px-3 py-2 border-red-600 transition duration-300 hover:text-white  hover:from-red-800 hover:to-red-400 hover:bg-gradient-to-r focus:outline-none focus:ring-2 focus:ring-white">
+        {carts.length ? (
+          <Link to="/dashboard/paymentForm">
+            <button className=" text-xl font-bold rounded-md border-2 px-3 py-2 border-red-600 transition duration-300 hover:text-white  hover:from-red-800 hover:to-red-400 hover:bg-gradient-to-r focus:outline-none focus:ring-2 focus:ring-white">
+              Pay
+            </button>
+          </Link>
+        ) : (
+          <button
+            disabled
+            className="text-xl font-bold rounded-md border-2 px-3 py-2 border-red-600 transition duration-300"
+          >
             Pay
           </button>
-        </Link>
+        )}
       </div>
     </div>
   );

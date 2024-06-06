@@ -95,18 +95,18 @@ const Dashboard = () => {
               Home
             </Link>
           </li>
-          {/* <li
+          <li
             className={`rounded-sm px-6 py-2  ${
               open ? "opacity-100 duration-500 " : "opacity-0"
             } hover:bg-slate-300`}
           >
             <Link
-              to="/dashboard/cart"
+              to="/dashboard/payment"
               className="text-xl hover:text-red-500 duration-500"
             >
-              My Cart
+              Payment
             </Link>
-          </li> */}
+          </li>
           <li
             className={`rounded-sm px-6 py-2  ${
               open ? "opacity-100 duration-500 " : "opacity-0"
@@ -123,7 +123,7 @@ const Dashboard = () => {
           >
             <button
               onClick={handleLogOut}
-              className="text-xl  duration-500 text-red-600 hover:bg-red-600 py-1 rounded-mds px-3 hover:text-white"
+              className="text-xl  duration-500 text-red-600 hover:bg-red-600 py-1 rounded-mds px-2 hover:text-white "
             >
               LogOut
             </button>

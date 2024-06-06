@@ -97,6 +97,14 @@ const Navbar = () => {
                   Contact Us
                 </Link>
               </li>
+              <li className="mx-4 lg:my-0 ">
+                <Link
+                  to="/about"
+                  className="text-xl hover:text-red-500 duration-500"
+                >
+                  About Us
+                </Link>
+              </li>
 
               {user ? (
                 <>

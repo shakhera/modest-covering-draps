@@ -4,28 +4,49 @@ import useProduct from "../../../hooks/useProduct";
 import FilterWithPrice from "../FilterWithPrice/FilterWithPrice";
 import ProductFilter from "../FilterWithPrice/ProductFilter";
 import Advertising from "../Collections/Advertising/Advertising";
+import Pagination from "../Pagination/Pagination";
 
 const Shop = () => {
-  const [products] = useProduct();
-  const [categorys, setCategorys] = useState("All");
+  // const [products] = useProduct();
+  // const [categorys, setCategorys] = useState("All");
+  const [category, setCategory] = useState("All");
   const [filterProduct, setFilterProduct] = useState([]);
   const [pageNum, setPageNum] = useState(0);
   const [pageSize, setPageSize] = useState(6);
-  // const [product, setProduct] = useState([]);
+  const [products, setProducts] = useState([]);
   const [count, setCount] = useState(0);
   const pages = Math.ceil(count / pageSize);
 
   useEffect(() => {
-    setFilterProduct(products);
-  }, [products]);
+    fetchProduct();
+  }, [pageNum, pageSize, category]);
+
+  const fetchProduct = () => {
+    const url = `http://localhost:5000/product?page=${pageNum}&size=${pageSize}&category=${category}`;
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        setCount(data.count);
+        setProducts(data.products);
+      })
+      .catch((error) => {
+        console.log("Error fatching products", error);
+      });
+  };
 
   const handleFilter = (product) => {
-    setFilterProduct(product);
+    setProducts(product);
   };
   const handleClear = () => {
-    setFilterProduct(products);
+    setCategory("All");
+    setPageNum(0);
   };
 
+  const updatePageNum = (num) => {
+    if (num >= 0 && num < pages) {
+      setPageNum(num);
+    }
+  };
   const categories = [
     "All",
     "Borka",
@@ -38,10 +59,10 @@ const Shop = () => {
     "Bottle",
   ];
 
-  const filterProducts =
-    categorys === "All"
-      ? filterProduct
-      : filterProduct.filter((product) => product.category === categorys);
+  // const filterProducts =
+  //   categorys === "All"
+  //     ? filterProduct
+  //     : filterProduct.filter((product) => product.category === categorys);
 
   return (
     <div className="">
@@ -67,11 +88,14 @@ const Shop = () => {
               <button
                 key={index}
                 className={`mr-4 mb-2 px-4 py-2 rounded-md border border-red-500 ${
-                  categorys === item
+                  category === item
                     ? "bg-red-600 text-white  shadow-inner shadow-red-950"
                     : "text-gray-800 dark:text-white"
                 }`}
-                onClick={() => setCategorys(item)}
+                onClick={() => {
+                  setCategory(item);
+                  setPageNum(0);
+                }}
               >
                 {item}
               </button>
@@ -83,12 +107,17 @@ const Shop = () => {
             {categorys === "All" ? products.length : filterProducts.length}
           </h2> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2  ">
-            {filterProducts.map((product) => (
+            {products.map((product) => (
               <ProductCard key={product._id} product={product}></ProductCard>
             ))}
           </div>
 
           {/* pagination  */}
+          <Pagination
+            pages={pages}
+            currentPage={pageNum}
+            onPageChange={updatePageNum}
+          />
         </div>
       </div>
     </div>

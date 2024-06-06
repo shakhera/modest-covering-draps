@@ -7,10 +7,14 @@ import Collection from "../pages/Collection/Collections/Collection";
 import SignUp from "../pages/Login/SignUp";
 import Blogs from "../pages/Blogs/Blogs";
 import Shop from "../pages/Collection/Shop/Shop";
-import Cart from "../pages/Collection/Cart/Cart";
-import CartLayout from "../Layout/CartLayout";
 import PrivateRoutes from "./PrivateRoutes";
 import DashboardLayout from "../Layout/DashboardLayout";
+import Cart from "../pages/Dashboard/Cart/Cart";
+import PaymentForm from "../pages/Dashboard/Payment/PaymentForm/PaymentForm";
+import Payment from "../Layout/Payment";
+import PaymentHistry from "../pages/Dashboard/Payment/PaymentHistry/PaymentHistry";
+import MyOrder from "../pages/Dashboard/MyOrder/MyOrder";
+import AboutUs from "../pages/Home/AboutUs/AboutUs";
 
 const routers = createBrowserRouter([
   {
@@ -40,6 +44,10 @@ const routers = createBrowserRouter([
         element: <Contact></Contact>,
       },
       {
+        path: "/about",
+        element: <AboutUs></AboutUs>,
+      },
+      {
         path: "/login",
         element: <Login></Login>,
       },
@@ -49,16 +57,7 @@ const routers = createBrowserRouter([
       },
     ],
   },
-  // {
-  //   path: "/",
-  //   element: <CartLayout></CartLayout>,
-  //   children: [
-  //     {
-  //       path: "/cart",
-  //       element: <Cart></Cart>,
-  //     },
-  //   ],
-  // },
+
   {
     path: "dashboard",
     element: (
@@ -70,6 +69,36 @@ const routers = createBrowserRouter([
       {
         path: "cart",
         element: <Cart></Cart>,
+      },
+      {
+        path: "paymentForm",
+        element: <PaymentForm></PaymentForm>,
+      },
+    ],
+  },
+  {
+    path: "dashboard/payment",
+    element: (
+      <PrivateRoutes>
+        <Payment></Payment>
+      </PrivateRoutes>
+    ),
+    children: [
+      // {
+      //   path: "/cart",
+      //   element: <Cart></Cart>,
+      // },
+      // {
+      //   path: "payments",
+      //   element: <Payment></Payment>,
+      // },
+      {
+        path: "paymentHistry",
+        element: <PaymentHistry></PaymentHistry>,
+      },
+      {
+        path: "myOrder",
+        element: <MyOrder></MyOrder>,
       },
     ],
   },

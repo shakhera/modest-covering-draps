@@ -6,10 +6,9 @@ import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const PopularProduct = () => {
   const [products] = useProduct();
-  // console.log(products);
-  const PopularProduct = products.filter(
-    (product) => product.category === "Bottle"
-  );
+  const PopularProduct = products
+    .filter((product) => product.category === "Bottle")
+    .slice(0, 4); // Display only the first four items
 
   return (
     <div>
