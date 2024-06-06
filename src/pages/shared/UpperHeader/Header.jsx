@@ -67,7 +67,7 @@ const Header = () => {
             <div
               className={`${
                 isCardOpen ? "opacity-100 " : "opacity-0"
-              }  duration-200 `}
+              }  duration-200`}
             >
               <div
                 // tabIndex={0}
