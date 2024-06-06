@@ -1,4 +1,4 @@
-# Allure Marketplace
+# modest-covering-draps
 ## Overview
 Allure Marketplace is an e-commerce platform powered by Firebase, offering a wide range of products to customers. Our platform aims to provide a seamless shopping experience with a focus on quality, affordability, and customer satisfaction.
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
