@@ -28,7 +28,7 @@ const Collection = () => {
   };
 
   // console.log("filter", filtered);
-  const url = `http://localhost:5000/products?minPrice=${minPrices}&maxPrice=${maxPrices}&rating=${ratings}`;
+  const url = `https://modest-covering-draps-server.vercel.app/products?minPrice=${minPrices}&maxPrice=${maxPrices}&rating=${ratings}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())

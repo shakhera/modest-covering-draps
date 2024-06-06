@@ -22,7 +22,7 @@ const Shop = () => {
   }, [pageNum, pageSize, category]);
 
   const fetchProduct = () => {
-    const url = `http://localhost:5000/product?page=${pageNum}&size=${pageSize}&category=${category}`;
+    const url = `https://modest-covering-draps-server.vercel.app/product?page=${pageNum}&size=${pageSize}&category=${category}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {

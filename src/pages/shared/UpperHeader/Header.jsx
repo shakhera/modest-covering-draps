@@ -57,7 +57,7 @@ const Header = () => {
               onClick={toggleCard}
             >
               <div className="indicator">
-                <FaShoppingCart className="h-5 w-5  text-white"></FaShoppingCart>
+                <FaShoppingCart className="h-5 w-5text-white"></FaShoppingCart>
                 <span className="badge badge-sm indicator-item">
                   {carts.length}
                 </span>
@@ -67,7 +67,7 @@ const Header = () => {
             <div
               className={`${
                 isCardOpen ? "opacity-100 " : "opacity-0"
-              }  duration-700 `}
+              }  duration-200 `}
             >
               <div
                 // tabIndex={0}
