@@ -10,8 +10,9 @@ This template provides a minimal setup to get React working in Vite with HMR and
 - Order Tracking: Track the status of your orders and stay updated on delivery.
 - Responsive Design: Enjoy a consistent experience across different devices.
 ## Technologies Used
-- Frontend: React, Tailwind CSS
-- Backend: Firebase (Authentication)
+- Frontend: React, Tailwind CSS,
+  Firebase (Authentication)
+- Backend: Node.js, Express, MongoDB
 - Payment: Stripe
 - Hosting: Firebase Hosting
 
