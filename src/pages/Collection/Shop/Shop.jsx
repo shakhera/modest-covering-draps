@@ -74,28 +74,13 @@ const Shop = () => {
   ];
 
   // const filterProducts =
-  //   categorys === "All"
+  //   categories === "All"
   //     ? filterProduct
   //     : filterProduct.filter((product) => product.category === categorys);
 
   return (
     <section className="container mx-auto">
       <div className="md:flex">
-        {/* Sidebar */}
-        {/* <div className="mx-20 md:mx-0 md:w-[25%] md:bg-opacity-25 pt-8 lg:pt-16 md:px-8 min-h-full right-0">
-          <div className="">
-            <h2 className="text-xl font-bold text-start pl-8 md:pl-0 md:text-left">
-              Filtering
-            </h2>
-
-            <FilterWithPrice
-              onFilter={handleFilter}
-              onClear={handleClear}
-            ></FilterWithPrice>
-          </div>
-          <DisplayCard />
-        </div> */}
-
         {/* Sidebar */}
         <div
           className={`absolute md:relative bg-gray-100 md:bg-transparent z-50 transform ${

@@ -1,5 +1,6 @@
 import React from "react";
 import "./category.css";
+import { Link } from "react-router-dom";
 
 const CategoryItem = ({ item }) => {
   const { category, img1, img2, img3 } = item;
@@ -19,9 +20,13 @@ const CategoryItem = ({ item }) => {
             className="absolute top-2 left-0 h-44 md:mt-28 hover:scale-105 duration-500"
           />
         </div>
-        <p className="text-center text-lg md:text-xl font-bold mt-2 truncate bg-white bg-opacity-75 px-3 py-2 shadow-lg">
+
+        <Link
+          to={`/shop`}
+          className=" my-4 flex items-center justify-center truncate"
+        >
           {category}
-        </p>
+        </Link>
       </div>
     </>
   );

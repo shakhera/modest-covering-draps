@@ -1,16 +1,15 @@
 import React from "react";
 import { FaAngleLeft, FaArrowLeft, FaUser, FaUserAlt } from "react-icons/fa";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const Testimonials = () => {
   return (
-    <div>
-      <div className="py-16 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-gray-900 text-center dark:text-white mb-12">
-            What Our Customers Say
-          </h2>
+    <>
+      <section className=" dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionTitle heading=" What Our Customers Say"></SectionTitle>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-lg dark:bg-gray-700  hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 hover:scale-105">
+            <div className="bg-white p-8 rounded-lg shadow-lg dark:bg-gray-700 hover:scale-105  transition duration-500 transform hover:-translate-y-2 ">
               <div className="flex items-center mb-4">
                 <FaUser className="w-12 h-12 rounded-full mr-4"></FaUser>
                 <div>
@@ -192,8 +191,8 @@ const Testimonials = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 };
 

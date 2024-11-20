@@ -9,9 +9,8 @@ const SectionTitle = ({ heading }) => {
       </div> */}
 
       <div className="my-4 w-full">
-        <h4 className="bg-gray-500 text-white text-base lg:text-2xl font-bold uppercase px-4 py-2 inline-block rounded-t-sm">
-          <span className="text-gray-950">||</span> {heading}{" "}
-          <span className="text-gray-950">||</span>
+        <h4 className=" text-gray-500 text-base lg:text-2xl font-bold uppercase px-4 py-2 inline-block rounded-t-sm">
+          || {heading} ||
         </h4>
         <div className="w-full border-b bg-neutral-800 "></div>
       </div>

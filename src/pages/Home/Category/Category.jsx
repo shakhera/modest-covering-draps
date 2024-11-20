@@ -84,19 +84,19 @@ const Category = () => {
 
   const [products] = useProduct();
 
-  const Borka = products.filter((item) => item.category === "Borka");
-  const ManSneaker = products.filter(
-    (item) => item.category === "Men's Sneaker"
-  );
-  const ManPant = products.filter((item) => item.category === "Men's Pants");
-  const ManBoot = products.filter((item) => item.category === "Men's Boot");
-  const WemanShoe = products.filter(
-    (item) => item.category === "Women's Shoes"
-  );
-  const Bag = products.filter((item) => item.category === "Bag");
-  const Cap = products.filter((item) => item.category === "Cap");
-  const Earphones = products.filter((item) => item.category === "Earphones");
-  const Bottle = products.filter((item) => item.category === "Bottle");
+  // const Borka = products.filter((item) => item.category === "Borka");
+  // const ManSneaker = products.filter(
+  //   (item) => item.category === "Men's Sneaker"
+  // );
+  // const ManPant = products.filter((item) => item.category === "Men's Pants");
+  // const ManBoot = products.filter((item) => item.category === "Men's Boot");
+  // const WemanShoe = products.filter(
+  //   (item) => item.category === "Women's Shoes"
+  // );
+  // const Bag = products.filter((item) => item.category === "Bag");
+  // const Cap = products.filter((item) => item.category === "Cap");
+  // const Earphones = products.filter((item) => item.category === "Earphones");
+  // const Bottle = products.filter((item) => item.category === "Bottle");
 
   return (
     <section className="container mx-auto">
