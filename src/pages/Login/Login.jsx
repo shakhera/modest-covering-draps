@@ -77,7 +77,7 @@ const Login = () => {
             </div>
           </div>
           {/* Sign in Button */}
-          <button className="text-lg rounded-xl relative p-[10px] block w-full  border-b-4 border-red-800 font-extrabold duration-500 overflow-hidden focus:border-indigo-500 z-50 group">
+          <button className="text-lg rounded-xl relative p-[10px] block w-full  border-b-4 border-red-800 font-extrabold duration-500 overflow-hidden focus:border-indigo-500 group">
             Sign In
             <span className="absolute opacity-0 group-hover:opacity-100 duration-100 group-hover:duration-1000 ease-out flex justify-center inset-0 items-center z-10 text-white">
               Let&apos;s go

@@ -4,28 +4,26 @@ import "./category.css";
 const CategoryItem = ({ item }) => {
   const { category, img1, img2, img3 } = item;
   return (
-    <div className="w-64 mb-4">
-      <div className="stack w-64 h-72 relative">
-        <img
-          src={img1}
-          className="rounded absolute top-0 left-0 h-44"
-          style={{ transform: "rotate(-25deg)" }} // Adjust the rotation angle as needed
-        />
-        <img
-          src={img2}
-          className="rounded absolute top-2 left-2 h-44 mt-28"
-          style={{ transform: "rotate(0deg)" }} // No rotation for the middle image
-        />
-        {/* <img
-      src={img3}
-      className="rounded absolute top-4 left-4 h-44 ml-32"
-      style={{ transform: "rotate(60deg)" }} // Adjust the rotation angle as needed
-    /> */}
+    <>
+      <div className="w-32 md:w-48 max-w-xs lg:max-w-md mx-auto ">
+        <div className="stack h-44 md:h-72 relative">
+          <img
+            src={img1}
+            alt={category}
+            className="hidden md:block absolute top-0 left-0 h-44 hover:scale-105 duration-500"
+            style={{ transform: "rotate(-15deg)" }}
+          />
+          <img
+            src={img2}
+            alt={category}
+            className="absolute top-2 left-0 h-44 md:mt-28 hover:scale-105 duration-500"
+          />
+        </div>
+        <p className="text-center text-lg md:text-xl font-bold mt-2 truncate bg-white bg-opacity-75 px-3 py-2 shadow-lg">
+          {category}
+        </p>
       </div>
-      <p className="text-center text-xl font-bold mt-2 truncate bg-white bg-opacity-75 px-2 py-1 mx-4 rounded-lg shadow-lg">
-        {category}
-      </p>
-    </div>
+    </>
   );
 };
 

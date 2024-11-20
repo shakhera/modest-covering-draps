@@ -83,18 +83,18 @@ const Blogs = () => {
   };
 
   return (
-    <div className="w-10/12 mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="container mx-auto ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {blogPosts.map((post) => (
           <div
             key={post.id}
-            className="p-6 rounded-lg shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transform hover:scale-105 transition-transform duration-500"
+            className="p-2 bg-white dark:bg-gray-800  transform  transition-transform "
           >
-            <div className="hover:shadow-xl hover:shadow-gray-700 p-6 rounded-xl">
+            <div className=" hover:shadow-gray-700 p-2 ">
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-full h-40 object-cover rounded-t-lg"
+                className="w-full h-40 object-cover hover:scale-105 duration-500"
               />
               <div>
                 <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">

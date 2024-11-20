@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import useProduct from "../../../hooks/useProduct";
 import "./category.css";
@@ -6,8 +6,11 @@ import CategoryItem from "./CategoryItem";
 import ProductCategory from "../ProductCategory/ProductCategory";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Category = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   //   const categories = [
   //     {
   //       category: "Borka",
@@ -96,9 +99,7 @@ const Category = () => {
   const Bottle = products.filter((item) => item.category === "Bottle");
 
   return (
-    <div>
-      <SectionTitle heading="product category"></SectionTitle>
-
+    <section className="container mx-auto">
       {/* <ProductCategory items={Borka}></ProductCategory>
       <ProductCategory items={ManSneaker}></ProductCategory>
       <ProductCategory items={ManPant}></ProductCategory>
@@ -109,15 +110,52 @@ const Category = () => {
       <ProductCategory items={Earphones}></ProductCategory>
       <ProductCategory items={Bottle}></ProductCategory> */}
 
-      <div className="home-container mt-8">
-        {/* <div className="grid grid-cols-3 gap-4"> */}
-        <div className="flex flex-wrap justify-center gap-x-32 gap-y-12 md:w-10/12 mx-auto ">
-          {categories.map((item, index) => (
-            <CategoryItem key={index} item={item}></CategoryItem>
-          ))}
+      <div className="overflow-hidden md:w-11/12 mx-4 md:mx-auto">
+        <div className="relative">
+          <SectionTitle heading="product category" />
+
+          <div className="absolute right-0 -top-0 z-10 gap-1 ">
+            {/* Left Arrow */}
+            <button
+              onClick={() =>
+                setCurrentIndex((prev) =>
+                  prev === 0 ? categories.length - 1 : prev - 1
+                )
+              }
+              className="p-2 rounded-full bg-white border border-gray-300 hover:bg-red-700 transition duration-200"
+            >
+              <ChevronLeft className="w-6 h-6 text-gray-600 hover:text-white" />
+            </button>
+
+            {/* Right Arrow */}
+            <button
+              onClick={() =>
+                setCurrentIndex((prev) =>
+                  prev === categories.length - 1 ? 0 : prev + 1
+                )
+              }
+              className="p-2 rounded-full bg-white border border-gray-300 hover:bg-red-700 transition duration-200"
+            >
+              <ChevronRight className="w-6 h-6 text-gray-600 hover:text-white" />
+            </button>
+          </div>
+        </div>
+        <div className="relative mt-0 md:mt-10 flex transition-transform ease-linear">
+          <div
+            className="flex gap-x-4 md:gap-x-16 duration-500"
+            style={{
+              transform: `translateX(-${currentIndex * 10}%)`,
+            }}
+          >
+            {categories.map((item, index) => (
+              <div key={index} className=" ">
+                <CategoryItem key={index} item={item} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

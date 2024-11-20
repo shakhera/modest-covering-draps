@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 
 const Bannar = () => {
   return (
-    <div>
-      <div className="relative bg-gray-900 overflow-hidden">
+    <section className="">
+      <div className="relative overflow-hidden ">
         <img
           src={banner3}
           alt="Banner"
-          className="object-cover w-full md:h-[540px]"
+          className="object-cover w-full h-[300px] md:h-[540px]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-80"></div>
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white px-4">
@@ -34,7 +34,7 @@ const Bannar = () => {
           <p className="text-xs">www.yourwebsite.com</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

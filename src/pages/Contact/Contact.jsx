@@ -2,15 +2,15 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="pt-6 lg:pt-1 mb-6">
-      <div className="hero min-h-screen ">
-        <div className="card shrink-0 md:w-2/3 lg:w-1/2  shadow-2xl bg-base-100">
-          <h2 className="text-center pt-4 text-2xl font-bold text-red-800 uppercase font-serif">
+    <section className="pt-6 lg:pt-1 mb-6">
+      <div className="hero md:min-h-screen container mx-auto">
+        <div className="card shrink-0 w-full mx-4 md:w-2/3 lg:w-1/2  shadow-2xl bg-base-100">
+          <h2 className="text-center text-2xl font-bold text-red-800 uppercase font-serif">
             Send Us a Message
           </h2>
           <form className="card-body dark:bg-black">
-            <div className="flex gap-3">
-              <div className="form-control w-1/2">
+            <div className="md:flex gap-3">
+              <div className="form-control md:w-1/2">
                 <label className="label">
                   <span className="label-text">Name*</span>
                 </label>
@@ -22,7 +22,7 @@ const Contact = () => {
                   required
                 />
               </div>
-              <div className="form-control w-1/2">
+              <div className="form-control md:w-1/2">
                 <label className="label">
                   <span className="label-text">Email*</span>
                 </label>
@@ -68,7 +68,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

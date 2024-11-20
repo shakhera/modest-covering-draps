@@ -5,12 +5,15 @@ import FilterWithPrice from "../FilterWithPrice/FilterWithPrice";
 import ProductFilter from "../FilterWithPrice/ProductFilter";
 import Advertising from "../Collections/Advertising/Advertising";
 import Pagination from "../Pagination/Pagination";
+import DisplayCard from "../DisplayCard/DisplayCard";
+import { Cross, Menu, X } from "lucide-react";
 
 const Shop = () => {
   // const [products] = useProduct();
   // const [categorys, setCategorys] = useState("All");
   const [category, setCategory] = useState("All");
   const [filterProduct, setFilterProduct] = useState([]);
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const [pageNum, setPageNum] = useState(0);
   const [pageSize, setPageSize] = useState(6);
   const [products, setProducts] = useState([]);
@@ -47,6 +50,17 @@ const Shop = () => {
       setPageNum(num);
     }
   };
+
+  // const updatePageNum = (num) => {
+  //   if (num >= 0 && num < pages) {
+  //     setPageNum(num);
+  //     window.scrollTo({
+  //       top: 0, // Scroll to the top of the page when switching pages
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // };
+
   const categories = [
     "All",
     "Borka",
@@ -65,25 +79,57 @@ const Shop = () => {
   //     : filterProduct.filter((product) => product.category === categorys);
 
   return (
-    <div className="">
+    <section className="container mx-auto">
       <div className="md:flex">
-        <div className="mx-20 md:mx-0 md:w-[25%] md:bg-slate-500 md:bg-opacity-25  pt-8 lg:pt-16 md:px-8 min-h-full right-0">
+        {/* Sidebar */}
+        {/* <div className="mx-20 md:mx-0 md:w-[25%] md:bg-opacity-25 pt-8 lg:pt-16 md:px-8 min-h-full right-0">
           <div className="">
-            {/* <h2 className="text-xl font-bold text-start pl-8 md:pl-0 md:text-left">
+            <h2 className="text-xl font-bold text-start pl-8 md:pl-0 md:text-left">
               Filtering
-            </h2> */}
+            </h2>
 
             <FilterWithPrice
               onFilter={handleFilter}
               onClear={handleClear}
             ></FilterWithPrice>
           </div>
+          <DisplayCard />
+        </div> */}
+
+        {/* Sidebar */}
+        <div
+          className={`absolute md:relative bg-gray-100 md:bg-transparent z-50 transform ${
+            isSidebarVisible ? "translate-x-0" : "translate-x-full"
+          } md:translate-x-0 transition-transform duration-500 w-72 md:w-[25%] pt-8 lg:pt-16 px-6 md:px-8 min-h-screen right-0`}
+          style={{
+            display:
+              isSidebarVisible ||
+              !window.matchMedia("(max-width: 768px)").matches
+                ? "block"
+                : "none",
+          }}
+        >
+          <h2 className="text-xl font-bold">Filtering</h2>
+          <FilterWithPrice
+            onFilter={handleFilter}
+            onClear={handleClear}
+          ></FilterWithPrice>
+          <DisplayCard />
         </div>
 
+        {/* Menu Bar Button */}
+        <button
+          onClick={() => setIsSidebarVisible(!isSidebarVisible)}
+          className="block md:hidden top-40 right-0 text-red-700 p-2 z-50"
+        >
+          {isSidebarVisible ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        {/* main content  */}
         <div className="md:w-[75%] ">
           <Advertising></Advertising>
 
-          <div className="flex flex-wrap justify-center">
+          <div className="flex flex-wrap justify-center overflow-x-auto">
             {categories.map((item, index) => (
               <button
                 key={index}
@@ -120,7 +166,7 @@ const Shop = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
