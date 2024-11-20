@@ -59,7 +59,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <>
-      <div className="px-2 py-2 shadow-lg max-w-[350px]  font-sans  space-y-2  md:mx-auto bg-white dark:bg-gray-800">
+      <div className="px-2 py-2 shadow-lg max-w-[350px]  font-sans space-y-2  md:mx-auto bg-white dark:bg-gray-800">
         <div className="flex justify-center w-full h-48 lg:h-[280px] relative">
           {/* <div className="flex justify-between items-center left-4 right-4 top-4 absolute">
             <button className="bg-[#0095FF] hover:bg-[#0095FF]/90 duration-200 text-white font-medium px-3 py-1 rounded-xl">
